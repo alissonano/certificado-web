@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esbam</title>
+    
+    <link rel="stylesheet" href="../public/bootstrap/style.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/bootstrap/dashboard.css">
+   
+     
+</head>
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#"><img src="../public/img/esbam-logo.png" width="120" heigth="25" alt=""></a>
+        
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <input class="form-control form-control-success w-100 rounded-0 border-0" type="text" placeholder="Pesquisar" aria-label="Search">
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3 text-white" href="#">Sair</a>
+            </div>
+        </div>
+    
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3 sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-success" aria-current="page" href="/">
+                            <span data-feather="home" class="align-text-bottom"></span>
+                            Dashboard
+                            </a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="/eventos-pendentes">
+                            <span data-feather="file" class="align-text-bottom"></span>
+                            Eventos Pedentes
+                            </a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/eventos-encerrados">
+                            <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                            Eventos Encerrados
+                            </a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="/certificado-emitido">
+                            <span data-feather="users" class="align-text-bottom"></span>
+                            Certificados Emitidos
+                            </a>
+                        </li>
+                    </ul>
+      
+                </div>
+            </nav>
+      
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Eventos Encerrados</h1>
+                    
+                   
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 mb-3">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                
+                                <h4 class="my-0 fw-normal text-center">XII Jornada de Serviço Social</h4>
+                            </div>
+                            
+                            <div class="card-body">
+                                <!-- <h1 class="card-title pricing-card-title"></h1> -->
+                                
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li class="text-success">Situação: Encerrado</li>
+                                    <li>Curso: Serviço Social</li>
+                                    <li>Docente Responsável: Simone Moraes Lisboa</li>
+                                    <li>Data do Evento: 15/05/2023, 16/05/2023, 17/05/2023</li>
+                                    <li>Carga Horária: 20H</li>
+                                </ul>
+                                
+                                <!-- <a href="">
+                                    <button type="button" class="w-100 btn btn-lg btn-outline-success" data-bs-toogle="modal" data-bs-target="#modalTour">
+                                        Detalhes
+                                    </button>
+                                </a> -->
+
+                                <button type="button" class="w-100 btn btn-lg btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Detalhes
+                                </button>
+                            </div>
+                        </div>
+                    </div>   
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">XII Jornada de Serviço Social</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Curso: lorem ipsum</li>
+                        <li>Docente Responsável: lorem ipsum</li>
+                        <li>Data do Evento: 15/05/2023</li>
+                        <li>Carga Horária: lorem ipsum</li>
+                        <li>Temática: lorem ipsum</li>
+                        <li>PROGRAMAÇÃO: lorem ipsum</li>
+                        <li>Investimento: lorem ipsum</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-footer">
+                    
+                    <a href="lista-presenca.html"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Lista de Presença</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+
+<script src="../public/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="../public/script/feather.js"></script>    
+<script src="../publicscript/chart.js"></script>
+<script src="../public/dashboard.js"></script>
+</body>
+</html>
